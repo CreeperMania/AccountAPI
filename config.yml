@@ -1,0 +1,10 @@
+# An existing MySQL database is required.
+mysql:
+  host: '127.0.0.1'
+  port: 3306
+  user: 'root'
+  pw: ''
+  db: 'AccountAPI'
+
+# If true, the plugin will try to connect to the database on server start/reload and will be disabled (when using with Bukkit) if the connection fails.
+check-connection: true

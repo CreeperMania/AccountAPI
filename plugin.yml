@@ -1,0 +1,5 @@
+name: AccountAPI
+version: 0.1
+author: CreeperMania
+website: CreeperMania.eu
+main: eu.CreeperMania.plugin.AccountAPI.BukkitMain
