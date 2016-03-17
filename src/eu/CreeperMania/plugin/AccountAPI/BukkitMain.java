@@ -37,5 +37,7 @@ public class BukkitMain extends JavaPlugin {
 				getPlugin().getServer().getPluginManager().disablePlugin(this);
 			}
 		}
+		
+		getServer().getPluginManager().registerEvents(new BukkitLoginEvent(), this);
 	}
 }

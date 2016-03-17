@@ -8,3 +8,20 @@ mysql:
 
 # If true, the plugin will try to connect to the database on server start/reload and will be disabled (when using with Bukkit) if the connection fails.
 check-connection: true
+
+auto-account:
+  # Generate account when a player joins the first time
+  enable: false
+  
+  # If true, only generate the account if player has permission 'account.autogenerate'
+  permission: false
+  
+  # default password HASH for auto-created accounts (this is NOT the password in plain text!)
+  # Use SHA256 (UTF-8) for hash generation.
+  # This tool may be helpful: http://www.xorbin.com/tools/sha256-hash-calculator
+  # An empty string ('') means players can't login. This is the most secure option. However, you have to provide a way for players to change their password while not being logged in, or they won't be able to login or to change it.
+  # The hash of an empty string ('e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855') means the password is an empty string (''). Very insecure.
+  # If you want the default password to be '12345' (just an EXAMPLE!) you have to enter the hash of 12345 ('5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'). Also insecure because every new player's password would be the same.
+  # Recommendation: Set this to '' and provide a command to change it ingame (ex. /changepw). IMPORTANT: Don't use commands like /changepw <newpassword>. Every password could be easily found in the logfiles.
+  # More security information here: http://dev.bukkit.org/bukkit-plugins/accountapi/pages/security/
+  password-hash: ''

@@ -21,6 +21,7 @@ public class BungeeMain extends Plugin {
 	public void onEnable(){
 		
 		AccountAPI.bungeecord = true;
+		
 		try{
 			config = config();
 		} catch(IOException e){
@@ -43,6 +44,9 @@ public class BungeeMain extends Plugin {
 				e.printStackTrace();
 			}
 		}
+		
+		getProxy().getPluginManager().registerListener(this, new BungeeLoginEvent());
+		
 	}
 	
 	

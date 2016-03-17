@@ -1,5 +1,8 @@
 name: AccountAPI
-version: 0.1
+version: 0.2
 author: CreeperMania
 website: CreeperMania.eu
 main: eu.CreeperMania.plugin.AccountAPI.BukkitMain
+permissions:
+  account.autogenerate:
+    description: Generate an account when the player joins the first time
